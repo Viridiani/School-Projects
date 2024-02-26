@@ -1,0 +1,24 @@
+CSCI200 Project Proposal 
+
+TITLE:
+Avery Christie
+CSCI200 Section A
+Cryptography Program 
+
+PROBLEM DESCRIPTION:
+I will be creating a program which takes in a string or a file from the user and chooses to encrypt/decrypt the strings using a variety of ciphers and decryption methods. The user will be able to select a key to encrypt or decrypt their text and output the result, both into the console and a text file.
+
+PROGRAM DOCUMENTATION:
+The program uses the terminal to take in user inputs and will walk through the different options. It should account for any "bad" inputs as well. This program does not require SFML nor any external libraries other than standard c/c++ ones. If I had more time, I would have added more ciphers (like completing the railfence cipher or adding conversions to base32...) and I would have also made the execution time measurement system a bit more detailed.
+
+CLASS DESCRIPTION:
+The main concrete class of the program is Cryptography(.cpp and .h). This includes all of the member files and generic getter/setter functions, as well as the atbash cipher as that does not have a specific encode/decode process. The Encryption/Decryption classes override the methods in the virtual ICryptography class because the methods take in the same inputs and have the same outputs (plus method names). The main way classes influenced the structure of the program was through how the process for encryption/decryption are similar, but different enough to be their own objects/methods. They can use the same key/structure, but will have a different algorithm; hence why both encryption/decryption inherit from the Cryptography class.
+
+LIST DATA STRUCTURE:
+This program makes use of vectors to manipulate strings throughout the program and to manage the keys for encryption/decryption. This was chosen because it was a dynamic list structure (which would be used for changes in strings or railfence) and it was also easily manipulatable.
+
+FILE I/O:
+This program makes use of an input file, which it takes text from to put into the Encryption/Decryption class, and an output file, which it writes the results to.
+
+REFLECTIONS:
+I think the main thing I learned from this project was to do more research before hand. I initially thought the viginere cipher would be the hardest to code, but it boils down to basic addition and string manipulation. On the other hand, the railfence cipher was incredibly difficult to code (it didn't work and is not included in this program) and required working with 2D vectors. In doing another project, I will definitely do more research into what I am coding and I will also probably utilize external libraries to help with some things, such as measuring execution time in an easy way. Finally, knowing how difficult some of the algorithms were to code, I would have started working on the project earlier (or at least the algorithms part of it).
